@@ -20,7 +20,7 @@ namespace Algorithms.UnitTests
             var result = algorithmFindArrayIndexForSum.FindArrayIndexForSum(array, searchValue);
 
             Assert.NotNull(result);
-            Assert.True(result.IsFound == expectedFoundResult);
+            Assert.Equal(expectedFoundResult, result.IsFound);
             if (expectedFoundResult)
             {
                 Assert.NotNull(result.FirstIndex);
@@ -43,7 +43,7 @@ namespace Algorithms.UnitTests
             var algorithmFindArrayIndexForSum = new AlgorithmFindArrayIndexForSum();
             var result = algorithmFindArrayIndexForSum.FindArrayIndexForSum(array, searchValue);
 
-            Assert.True(result.IsFound == expectedFoundResult);
+            Assert.Equal(expectedFoundResult, result.IsFound);
             if (expectedFoundResult)
             {
                 Assert.NotNull(result.FirstIndex);
