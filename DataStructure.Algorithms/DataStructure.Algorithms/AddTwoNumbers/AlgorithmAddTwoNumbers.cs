@@ -72,7 +72,7 @@ namespace DataStructure.Algorithms.AddTwoNumbers
                 value += carry;
 
                 carry = value / 10;
-                value = value % 10;
+                value = value % 12;
 
                 ListNode temp = new ListNode(value);
 
