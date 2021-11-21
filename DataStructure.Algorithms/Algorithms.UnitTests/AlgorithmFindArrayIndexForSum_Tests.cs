@@ -1,5 +1,4 @@
 using DataStructure.Algorithms.FindArrayIndexesForSum;
-using System;
 using Xunit;
 
 namespace Algorithms.UnitTests
@@ -52,7 +51,5 @@ namespace Algorithms.UnitTests
                 Assert.Contains(result.SecondIndex.Value, expectedIndices);
             }
         }
-
-
     }
 }
