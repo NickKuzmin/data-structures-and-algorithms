@@ -13,22 +13,30 @@ namespace Algorithms.UnitTests
         {
             var node1 = new AlgorithmAddTwoNumbers.ListNode();
             var currentNode1 = node1;
-            foreach (var listNodeValue in listNodeValues1)
+            for (var i = 0; i < listNodeValues1.Length; i++)
             {
+                var listNodeValue = listNodeValues1[i];
                 currentNode1.Value = listNodeValue;
-                var newNode = new AlgorithmAddTwoNumbers.ListNode();
-                currentNode1.Next = newNode;
-                currentNode1 = newNode;
+                if (i < listNodeValues1.Length - 1)
+                {
+                    var newNode = new AlgorithmAddTwoNumbers.ListNode();
+                    currentNode1.Next = newNode;
+                    currentNode1 = newNode;
+                }
             }
 
             var node2 = new AlgorithmAddTwoNumbers.ListNode();
             var currentNode2 = node2;
-            foreach (var listNodeValue in listNodeValues2)
+            for (var i = 0; i < listNodeValues2.Length; i++)
             {
+                var listNodeValue = listNodeValues1[i];
                 currentNode2.Value = listNodeValue;
-                var newNode = new AlgorithmAddTwoNumbers.ListNode();
-                currentNode2.Next = newNode;
-                currentNode2 = newNode;
+                if (i < listNodeValues2.Length - 1)
+                {
+                    var newNode = new AlgorithmAddTwoNumbers.ListNode();
+                    currentNode2.Next = newNode;
+                    currentNode2 = newNode;
+                }
             }
 
             var algorithmAddTwoNumbers = new AlgorithmAddTwoNumbers();
