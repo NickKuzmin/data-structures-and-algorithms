@@ -6,7 +6,7 @@ namespace Algorithms.UnitTests
     public class AlgorithmAddTwoNumbers_Tests
     {
         [InlineData((object)new[] { 2, 4, 3 }, new[] { 5, 6, 4 }, new[] { 7, 0, 8})]
-        [InlineData((object)new[] { 0 }, new[] { 0 }, new[] { 0 })]
+        //[InlineData((object)new[] { 0 }, new[] { 0 }, new[] { 0 })]
         [InlineData((object)new[] { 9, 9, 9, 9, 9, 9, 9 }, new[] { 9, 9, 9, 9 }, new[] { 8, 9, 9, 9, 0, 0, 0, 1 })]
         [Theory]
         public void AlgorithmAddTwoNumbers_CorrectInputValues_ExpectCorrectResult(int[] listNodeValues1, int[] listNodeValues2, int[] expectedResultValues)

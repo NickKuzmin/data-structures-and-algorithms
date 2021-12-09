@@ -1,36 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
-namespace DataStructure.Algorithms.FindArrayIndexesForSum
+namespace DataStructure.Algorithms.AlgorithmFindArrayIndexForSum
 {
     public class AlgorithmFindArrayIndexForSum
     {
         public AlgorithmFindArrayIndexForSumResult FindArrayIndexForSum(int[] array, int searchValue)
         {
-            var results = new List<Tuple<int, int>>();
-
-            var dictionary = new Dictionary<int, int>();
-            for (var i = 0; i < array.Length; i++)
+            var dictionaryIndexByValue = new Dictionary<int, int>();
+            for (var index = 0; index < array.Length; index++)
             {
-                var rest = searchValue - array[i];
+                var currentElement = array[index];
+                var rest = searchValue - currentElement;
 
-                if (dictionary.ContainsKey(rest))
+                if (dictionaryIndexByValue.ContainsKey(rest))
                 {
-                    results.Add(new Tuple<int, int>(i, dictionary[rest]));
+                    return new AlgorithmFindArrayIndexForSumResult
+                    {
+                        IsFound = true,
+                        FirstIndex = index,
+                        SecondIndex = dictionaryIndexByValue[rest]
+                    };
                 }
-                else
-                {
-                    dictionary[array[i]] = i;
-                }
+
+                dictionaryIndexByValue[currentElement] = index;
             }
 
-            var result = results.FirstOrDefault();
             return new AlgorithmFindArrayIndexForSumResult
             {
-                IsFound = result != null,
-                FirstIndex = result?.Item1,
-                SecondIndex = result?.Item2
+                IsFound = false
             };
         }
 

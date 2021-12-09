@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DataStructure.Algorithms.AddTwoNumbers
+﻿namespace DataStructure.Algorithms.AddTwoNumbers
 {
     /// <summary>
     /// https://leetcode.com/problems/add-two-numbers/
